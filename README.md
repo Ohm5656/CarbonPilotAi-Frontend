@@ -141,8 +141,7 @@ Analytics + Reporting
 
 ## ✦ Carbon Calculation Logic
 
-Total Emissions =  
-Σ (Activity Data × Emission Factor)
+Total Emissions =  Σ (Activity Data × Emission Factor)
 ---
 
 ## ✦ Social Impact
