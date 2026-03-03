@@ -45,7 +45,8 @@ services/      → API client + request layer
 store/         → state management (if used)
 utils/         → helpers (unit convert, formatting, validators)
 ```
-📦 Project Structure
+## 📂 Project Structure
+```bash
 carbonpilotai-frontend/
 ├── public/
 ├── src/
@@ -75,3 +76,4 @@ carbonpilotai-frontend/
 ├── .env.example
 ├── package.json
 └── README.md
+```
