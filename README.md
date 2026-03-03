@@ -110,7 +110,7 @@ SME User
 Web Dashboard (React)
    │
    ▼
-Backend API (FastAPI)
+Backend API (FastAPI/Go)
    │
    ▼
 Carbon Calculation Core
