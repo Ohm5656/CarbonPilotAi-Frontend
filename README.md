@@ -1,104 +1,92 @@
-# ✦ CarbonPilotAI
+# 🌍 CarbonPilotAI
 ### AI-Powered Carbon Intelligence Platform for SMEs
 
-> Measure. Reduce. Survive the Supply Chain.
+> Measure. Reduce. Compete. Survive the Supply Chain.
 
-![AI Powered](https://img.shields.io/badge/AI-Driven-000000?style=for-the-badge&logo=openai&logoColor=FFD700)
-![Climate Tech](https://img.shields.io/badge/Climate-Tech-000000?style=for-the-badge&logo=leaflet&logoColor=FFD700)
-![Net Zero](https://img.shields.io/badge/Net-Zero-Ready-000000?style=for-the-badge&logo=earth&logoColor=FFD700)
-![GovTech](https://img.shields.io/badge/GovTech-Compatible-000000?style=for-the-badge&logo=googlecloud&logoColor=FFD700)
-
----
-
-## ✦ Vision
-
-Thailand is under increasing pressure to transition toward **Net Zero emissions**.  
-Large corporations are demanding carbon transparency from their suppliers.
-
-SMEs that cannot report or reduce emissions risk being excluded from global supply chains.
-
-**CarbonPilotAI empowers SMEs with AI-driven carbon measurement, reduction guidance, and compliance readiness.**
-
-We don’t just calculate emissions.  
-We build **carbon survival intelligence.**
+![AI Driven](https://img.shields.io/badge/AI-Driven-4B0082?style=for-the-badge&logo=openai&logoColor=white)
+![Climate Tech](https://img.shields.io/badge/Climate-Tech-2E8B57?style=for-the-badge&logo=leaflet&logoColor=white)
+![Net Zero Ready](https://img.shields.io/badge/Net%20Zero-Ready-00A86B?style=for-the-badge&logo=earth&logoColor=white)
+![GovTech Compatible](https://img.shields.io/badge/GovTech-Compatible-1E90FF?style=for-the-badge&logo=googlecloud&logoColor=white)
 
 ---
 
-## ✦ Problem Statement
+## ✨ Vision
 
-- SMEs lack technical knowledge about carbon accounting  
-- Carbon reporting is complex and expensive  
-- Many businesses don’t know their Scope 1, 2, 3 emissions  
-- ESG compliance tools are built for large enterprises  
-- SMEs risk losing supply chain contracts  
+Thailand is rapidly moving toward **Net Zero commitments**.
+
+Large enterprises now require carbon transparency from their suppliers.
+
+SMEs that cannot measure or report emissions risk exclusion from global supply chains.
+
+**CarbonPilotAI empowers SMEs with intelligent carbon measurement, reduction guidance, and compliance readiness.**
+
+We do not just calculate emissions.  
+We build **Carbon Survival Intelligence.**
 
 ---
 
-## ✦ Solution
+## 🚨 Problem
+
+- SMEs lack carbon accounting knowledge  
+- ESG tools are expensive and enterprise-focused  
+- Scope 1, 2, 3 emissions are misunderstood  
+- Reporting frameworks are complex  
+- Supply chain pressure is increasing  
+
+---
+
+## 💡 Solution
 
 CarbonPilotAI provides:
 
-- AI-powered carbon footprint estimation  
-- Automated emission factor mapping  
-- Industry-specific benchmarking  
+- Automated carbon footprint estimation  
+- AI-powered emission classification  
+- Industry benchmarking engine  
 - Reduction pathway recommendations  
-- ESG report generation (SME-friendly format)  
+- Net Zero roadmap generation  
+- ESG summary export (PDF/CSV)  
 - Supply-chain readiness scoring  
 
 ---
 
-## ✦ Core Features
+# 🧠 Core Features
 
-- SME Carbon Calculator (Scope 1 & 2)
-- AI-based emission classification
-- Reduction strategy engine
-- Industry benchmark comparison
-- Carbon intensity dashboard
-- Net Zero roadmap generator
-- ESG summary export (PDF/CSV)
-- Supply chain compliance readiness score
----
-## ✦ Tech Stack
-
-### Frontend
-![React](https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=FFD700)
-![TypeScript](https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=typescript&logoColor=FFD700)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-000000?style=for-the-badge&logo=tailwind-css&logoColor=FFD700)
-
-### Backend
-![FastAPI](https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=fastapi&logoColor=FFD700)
-![Go](https://img.shields.io/badge/Go-000000?style=for-the-badge&logo=go&logoColor=FFD700)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=FFD700)
-
-### AI & Data
-![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=FFD700)
-![Pandas](https://img.shields.io/badge/Pandas-000000?style=for-the-badge&logo=pandas&logoColor=FFD700)
-![Scikit-Learn](https://img.shields.io/badge/ScikitLearn-000000?style=for-the-badge&logo=scikit-learn&logoColor=FFD700)
-
-### Infrastructure
-![Docker](https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=FFD700)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=FFD700)
+- Scope 1 & 2 Carbon Calculator
+- Emission Factor Auto-Matching
+- AI Reduction Strategy Engine
+- Carbon Intensity Dashboard
+- Industry Comparison Scoring
+- ESG Export Module
+- Compliance Readiness Index
 
 ---
 
-## ✦ System Architecture
-SME User
-↓
-Web Dashboard (react)
-↓
-Backend API (FastAPI)
-↓
-Carbon Calculation Engine
-↓
-Emission Factor Database
-↓
-AI Recommendation Model
-↓
-PostgreSQL
-↓
-Analytics + Reporting
+---
+
+# 🧩 Tech Stack
+
+## Frontend
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## Backend
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+
+## AI & Data
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+
+## Infrastructure
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
+
+
 
 ## ✦ Technical Design
 
@@ -139,6 +127,29 @@ Analytics + Reporting
 
 ---
 
+# 🏗 System Architecture
+
+```text
+SME User
+   │
+   ▼
+Web Dashboard (React)
+   │
+   ▼
+Backend API (FastAPI)
+   │
+   ▼
+Carbon Calculation Core
+   │
+   ▼
+Emission Factor Database
+   │
+   ▼
+AI Recommendation Engine
+   │
+   ▼
+PostgreSQL + Analytics
+```
 ## ✦ Carbon Calculation Logic
 
 Total Emissions =  Σ (Activity Data × Emission Factor)
