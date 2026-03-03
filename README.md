@@ -1,5 +1,5 @@
 # 🌍 CarbonPilotAI — Frontend
-### Luxury Web Dashboard for SME Carbon Intelligence
+### Web App for SME painpoint for Carbon Trend
 
 > A modern, fast, and user-friendly dashboard for measuring emissions, tracking reduction actions, and generating SME-ready reports.
 
