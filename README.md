@@ -70,15 +70,6 @@ CarbonPilotAI provides:
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## Backend
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-
-## AI & Data
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Scikit Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
 ## Infrastructure
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -106,23 +97,6 @@ CarbonPilotAI provides:
 - Auto-generate SME-friendly reports
 - Exportable for corporate procurement review
 - Carbon readiness index
-
----
-
-
-## ✦ Repository Structure
-.
-├── apps/
-│ ├── web/ # Frontend Dashboard
-│ └── api/ # Backend API
-├── carbon_engine/ # Emission calculation logic
-├── ai_model/ # Recommendation engine
-├── data/
-│ ├── emission_factors/
-│ └── benchmarks/
-├── reports/
-├── infra/
-└── docs/
 
 
 ---
