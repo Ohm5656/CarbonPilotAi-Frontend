@@ -45,35 +45,24 @@ services/      → API client + request layer
 store/         → state management (if used)
 utils/         → helpers (unit convert, formatting, validators)
 ```
-## 📂 Project Structure
-```bash
-carbonpilotai-frontend/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── ui/
-│   │   └── charts/
-│   ├── features/
-│   │   ├── calculator/
-│   │   ├── benchmarks/
-│   │   ├── recommendations/
-│   │   └── reports/
-│   ├── pages/
-│   │   ├── Dashboard.tsx
-│   │   ├── ActivityInput.tsx
-│   │   ├── Benchmarks.tsx
-│   │   └── Reports.tsx
-│   ├── services/
-│   │   ├── api.ts
-│   │   └── endpoints.ts
-│   ├── utils/
-│   │   ├── unit.ts
-│   │   ├── format.ts
-│   │   └── validate.ts
-│   ├── App.tsx
-│   └── main.tsx
-├── .env.example
-├── package.json
-└── README.md
-```
+## 📁 Project Structure
+
+```text
+.
+├── guidelines/            # Project documentation and design guidelines
+├── public/                # Static public files (served as-is)
+├── src/                   # Main source code
+│   ├── app/
+│   │   ├── components/    # Reusable UI components
+│   │   │   ├── figma/     # Components imported from Figma
+│   │   │   └── ui/        # Custom UI components (buttons, cards, etc.)
+│   │   └── pages/         # Application pages (Dashboard, Data Input, etc.)
+│   ├── assets/            # Images, icons, and media files
+│   ├── imports/           # Shared imports / config modules
+│   └── styles/            # Global styles (Tailwind / CSS)
+├── index.html             # Vite entry HTML
+├── package.json           # Dependencies and scripts
+├── package-lock.json      # Dependency lock file
+├── postcss.config.mjs     # PostCSS configuration
+├── vite.config.ts         # Vite configuration
+└── ATTRIBUTIONS.md        # Asset / library attributions
