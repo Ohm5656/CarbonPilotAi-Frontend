@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Upload, FileText, Zap, CheckCircle2, AlertCircle, Calendar, Building2, Sparkles, Save } from 'lucide-react';
+import PageTransition from '../components/PageTransition';
+import PageLoader from '../components/PageLoader';
 
 const factories = [
   'Bangkok Manufacturing Plant',
@@ -20,6 +22,14 @@ const months = [
 export default function DataInput() {
   const [selectedFactory, setSelectedFactory] = useState(factories[0]);
   const [selectedMonth, setSelectedMonth] = useState(months[2]); // March 2026
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 750);
+    return () => clearTimeout(timer);
+  }, []);
   
   // Upload state
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -96,7 +106,12 @@ export default function DataInput() {
     return 'Needs Improvement';
   };
 
+  if (isLoading) {
+    return <PageLoader message="Loading data entry form..." />;
+  }
+
   return (
+    <PageTransition>
     <div className="min-h-screen bg-[#0B0F14] py-12 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
@@ -452,5 +467,6 @@ export default function DataInput() {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 }

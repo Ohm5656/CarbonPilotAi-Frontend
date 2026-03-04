@@ -1,7 +1,9 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, Factory, Zap, CheckCircle2, Building2 } from 'lucide-react';
 import { useNavigate } from 'react-router';
+import PageTransition from '../components/PageTransition';
+import PageLoader from '../components/PageLoader';
 
 const industries = [
   'Automotive',
@@ -30,6 +32,14 @@ const tariffTypes = [
 export default function Onboarding() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 700);
+    return () => clearTimeout(timer);
+  }, []);
   
   // Step 1
   const [factoryName, setFactoryName] = useState('');
@@ -73,7 +83,12 @@ export default function Onboarding() {
   const isStep1Valid = factoryName.trim() !== '' && industry !== '';
   const isStep2Valid = true;
 
+  if (isLoading) {
+    return <PageLoader message="Loading onboarding wizard..." />;
+  }
+
   return (
+    <PageTransition>
     <div className="min-h-screen bg-[#0B0F14] flex items-center justify-center p-6">
       <div className="w-full max-w-4xl">
         {/* Header */}
@@ -425,5 +440,6 @@ export default function Onboarding() {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 }

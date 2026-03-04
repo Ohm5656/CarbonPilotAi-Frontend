@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { TrendingDown, Zap, Leaf, Target, Play, AlertTriangle, X, Info, ChevronRight } from 'lucide-react';
 import SimulationPanel from '../components/SimulationPanel';
+import PageTransition from '../components/PageTransition';
+import { SkeletonCard, SkeletonChart } from '../components/Skeleton';
 
 // Mock data for charts with anomalies
 const energyData = [
@@ -131,6 +133,15 @@ export default function Dashboard() {
   const [gaugeValue] = useState(73);
   const [simulationOpen, setSimulationOpen] = useState(false);
   const [selectedAnomaly, setSelectedAnomaly] = useState<typeof anomalies[0] | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simulate loading
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
@@ -160,7 +171,39 @@ export default function Dashboard() {
     Low: 'bg-[#00C6FF]/20 text-[#00C6FF] border-[#00C6FF]/40'
   };
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-[#0B0F14] px-6 py-12">
+        <div className="fixed inset-0 bg-[linear-gradient(to_right,#121821_1px,transparent_1px),linear-gradient(to_bottom,#121821_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none"></div>
+        <div className="relative max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mb-12"
+          >
+            <div className="h-12 w-64 bg-[#121821] rounded-lg animate-pulse mb-2" />
+            <div className="h-6 w-96 bg-[#121821] rounded animate-pulse" />
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[...Array(4)].map((_, i) => (
+              <SkeletonCard key={i} />
+            ))}
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-6 mb-12">
+            <div className="lg:col-span-2">
+              <SkeletonChart />
+            </div>
+            <SkeletonChart />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
+    <PageTransition>
     <div className="min-h-screen bg-[#0B0F14] px-6 py-12">
       {/* Background grid */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#121821_1px,transparent_1px),linear-gradient(to_bottom,#121821_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none"></div>
@@ -623,5 +666,6 @@ export default function Dashboard() {
         </motion.div>
       )}
     </div>
+    </PageTransition>
   );
 }

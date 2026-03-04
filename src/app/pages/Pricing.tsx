@@ -1,5 +1,8 @@
 import { motion } from 'motion/react';
 import { Check, Zap, TrendingUp, Sparkles } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import PageTransition from '../components/PageTransition';
+import PageLoader from '../components/PageLoader';
 
 const tiers = [
   {
@@ -63,7 +66,21 @@ const tiers = [
 ];
 
 export default function Pricing() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <PageLoader message="Loading pricing plans..." />;
+  }
+
   return (
+    <PageTransition>
     <div className="min-h-screen bg-[#0B0F14] px-6 py-12">
       {/* Background grid */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#121821_1px,transparent_1px),linear-gradient(to_bottom,#121821_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none"></div>
@@ -75,7 +92,7 @@ export default function Pricing() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-white via-[#00C6FF] to-[#00FFB2] bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-white via-[#00C6FF] to-[#00FFB2] bg-clip-text text-transparent">
             Transparent SaaS Pricing
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -244,5 +261,6 @@ export default function Pricing() {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 }

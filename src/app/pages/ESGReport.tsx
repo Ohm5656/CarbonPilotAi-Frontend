@@ -1,8 +1,25 @@
 import { motion } from 'motion/react';
 import { FileText, Download, Share2, Check, Calendar, TrendingDown, Leaf, Factory } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import PageTransition from '../components/PageTransition';
+import PageLoader from '../components/PageLoader';
 
 export default function ESGReport() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 900);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <PageLoader message="Generating ESG report..." />;
+  }
+
   return (
+    <PageTransition>
     <div className="min-h-screen bg-[#0B0F14] px-6 py-12">
       {/* Background grid */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#121821_1px,transparent_1px),linear-gradient(to_bottom,#121821_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none"></div>
@@ -280,5 +297,6 @@ export default function ESGReport() {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 }

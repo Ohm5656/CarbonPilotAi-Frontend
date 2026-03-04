@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Zap, Mail, Lock, Eye, EyeOff, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router';
+import PageTransition from '../components/PageTransition';
+import PageLoader from '../components/PageLoader';
 
 export default function Auth() {
   const [activeTab, setActiveTab] = useState<'login' | 'signup'>('login');
@@ -9,6 +11,14 @@ export default function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 600);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,7 +33,12 @@ export default function Auth() {
     'ROI-driven recommendations'
   ];
 
+  if (isLoading) {
+    return <PageLoader message="Loading authentication..." />;
+  }
+
   return (
+    <PageTransition>
     <div className="min-h-screen bg-[#0B0F14] flex">
       {/* Left Column - Brand & Value Props */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-[#0B0F14] via-[#121821] to-[#0B0F14] p-12 flex-col justify-center relative overflow-hidden">
@@ -290,5 +305,6 @@ export default function Auth() {
         </motion.div>
       </div>
     </div>
+    </PageTransition>
   );
 }
