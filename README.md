@@ -35,16 +35,7 @@ This frontend powers the **CarbonPilotAI Web Dashboard**, designed for Thai SMEs
 
 ---
 
-## 🏗 Frontend Architecture
 
-```text
-pages/         → route-level pages (Dashboard, Inputs, Reports)
-components/    → reusable UI components
-features/      → domain modules (calculator, benchmark, recommendation)
-services/      → API client + request layer
-store/         → state management (if used)
-utils/         → helpers (unit convert, formatting, validators)
-```
 ## 📁 Project Structure
 
 ```text
